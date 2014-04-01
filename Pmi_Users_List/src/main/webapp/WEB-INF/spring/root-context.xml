@@ -41,6 +41,6 @@
 	</bean>
 
 	<!-- @Component, @Service, @Repository -->
-	
+	<context:component-scan base-package="ua.lviv.ipm.lan.userlist.domain"></context:component-scan>
 	
 </beans>

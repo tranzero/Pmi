@@ -8,8 +8,8 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="sadmin")
-public class Sadmin {
+@Table(name="sysadmin")
+public class Sadmin extends BaseEntity {
 	
 	@Id
 	 @Column(name = "sadminid")

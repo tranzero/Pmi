@@ -16,7 +16,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name="rang")
-public class Rang {
+public class Rang extends BaseEntity {
 	 @Id
 	 @Column(name = "rangid")
 	 @GeneratedValue(strategy = GenerationType.AUTO)

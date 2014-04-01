@@ -6,7 +6,11 @@
 		<provider>org.hibernate.ejb.HibernatePersistence</provider>
 		<class>ua.lviv.ipm.lan.userlist.domain.Rang</class>
 		<class>ua.lviv.ipm.lan.userlist.domain.Sadmin</class>
-
+		<class>ua.lviv.ipm.lan.userlist.domain.Location</class>
+		<class>ua.lviv.ipm.lan.userlist.domain.Department</class>
+		<class>ua.lviv.ipm.lan.userlist.domain.User</class>
+		<class>ua.lviv.ipm.lan.userlist.domain.IpAdress</class>
+		<class>ua.lviv.ipm.lan.userlist.domain</class>
 		<properties>
 			
 			<!-- MySQL -->
@@ -20,6 +24,7 @@
 			<property name="hibernate.jdbc.use_scrollable_resultset"
 				value="false" />
 			<property name="current_session_context_class" value="thread" />
+			<property name="hibernate.ejb.cfgfile" value="hibernate.cfg.xml"/>
 		</properties>
 	</persistence-unit>
 </persistence>
