@@ -4,7 +4,8 @@
 	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
 	<persistence-unit name="PmiUsersList" transaction-type="RESOURCE_LOCAL">
 		<provider>org.hibernate.ejb.HibernatePersistence</provider>
-		
+		<class>ua.lviv.ipm.lan.userlist.domain.Rang</class>
+		<class>ua.lviv.ipm.lan.userlist.domain.Sadmin</class>
 
 		<properties>
 			
