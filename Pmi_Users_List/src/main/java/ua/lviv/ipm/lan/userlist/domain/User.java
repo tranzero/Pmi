@@ -1,15 +1,24 @@
 package ua.lviv.ipm.lan.userlist.domain;
 import static org.apache.commons.lang.Validate.*;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.Table;
+
 
 @Entity
 @Table(name="user")
+@NamedQueries(value = {
+		@NamedQuery(name = User.FIND_BY_LOGIN, query = User.FIND_BY_LOGIN_QUERY)})
 public class User extends BaseEntity {
+	
+	public static final String FIND_BY_LOGIN = "User.findByLogin";;
+	public static final String FIND_BY_LOGIN_QUERY = "SELECT user from User user WHERE user.login= ?1";
 	
 	@Id
 	@Column(name="userid")
@@ -48,7 +57,7 @@ public class User extends BaseEntity {
 		return login;
 	}
 
-	public void setLogin(String login) {
+	private void setLogin(String login) {
 		notEmpty(login);
 		this.login = login;
 	}

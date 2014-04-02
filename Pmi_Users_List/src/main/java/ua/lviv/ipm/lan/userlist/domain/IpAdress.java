@@ -49,6 +49,9 @@ public class IpAdress extends BaseEntity {
 	
 	@Column(name = "mac")
 	private String mac;
+	
+	@Column(name = "room")
+	private String room;
 
 	@Column(name = "isactive")
 	private boolean isActive;
@@ -58,7 +61,7 @@ public class IpAdress extends BaseEntity {
 
 	public IpAdress(String ipadress, String owner, String phone, String mac,
 			String email, boolean isActive, Sadmin sysadmin, Rang rang,
-			Location location, Department dep) {
+			Location location, Department dep, String room) {
 		this.setIpAdress(ipadress);
 		this.setOwner(owner);
 		this.setMac(mac);
@@ -69,6 +72,7 @@ public class IpAdress extends BaseEntity {
 		this.setPhone(phone);
 		this.setRang(rang);
 		this.setSysAdmin(sysadmin);
+		this.setRoom(room);
 	}
 
 	public Rang getRang() {
@@ -143,6 +147,14 @@ public class IpAdress extends BaseEntity {
 
 	public void setMac(String mac) {
 		this.mac = mac;
+	}
+
+	public String getRoom() {
+		return room;
+	}
+
+	public void setRoom(String room) {
+		this.room = room;
 	}
 
 	public boolean isActive() {
